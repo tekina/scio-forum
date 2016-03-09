@@ -3,7 +3,10 @@
 %br
 %h4.center-text
   - if user_signed_in?
-    = link_to 'Total registered users: ', users_path
+    - if current_user.admin?
+      = link_to 'Total registered users: ', users_path
+    - else
+      Total registered users: 
     = User.count
   - else
     = link_to 'Sign in', new_user_session_path
