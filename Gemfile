@@ -20,7 +20,6 @@ gem 'devise'
 gem 'devise_invitable'
 gem 'haml-rails'
 gem 'high_voltage'
-gem 'mysql2', '~> 0.3.18'
 gem 'simple_form'
 group :development do
   gem 'better_errors'
@@ -32,12 +31,14 @@ group :development do
   gem 'spring-commands-rspec'
 end
 group :development, :test do
+  gem 'mysql2', '~> 0.3.18'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
   gem 'thin'
 end
 group :production do
+  gem 'pg'
   gem 'rails_12factor'
   gem 'unicorn'
 end
