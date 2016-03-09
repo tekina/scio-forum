@@ -1,0 +1,5 @@
+%p
+  Welcome to Scio Forums!
+  Your email address, #{@email} was recently registered with us.
+%p Confirm your account email by clicking the link below:
+%p= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token)
