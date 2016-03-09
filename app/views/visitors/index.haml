@@ -1,0 +1,10 @@
+%h3 Welcome to Scio Forum
+%p
+%br
+%h4.center
+  - if user_signed_in?
+    = link_to 'Total registered users: ', users_path
+    = User.count
+  - else
+    = link_to 'Sign in', new_user_session_path
+    \ to access content

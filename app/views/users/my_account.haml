@@ -1,0 +1,13 @@
+%ul.list-unstyled
+  %li
+    .form-group
+      %label{:for => "fname"}
+        Name
+        %span.required *
+      %input#fname.form-control{:name => "fname", :value => "#{@user.name}", :type => "text"}/
+  %li
+    .form-group
+      %label{:for => "emailAddress"}
+        Email Address
+        %span.required *
+      %input#emailAddress.form-control{:name => "email", :value => "#{@user.email}", :type => "email"}/

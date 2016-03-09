@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   root to: 'visitors#index'
   devise_for :users
   resources :users
+  
+  get '/my_account' => 'users#my_account'
+  
 end
