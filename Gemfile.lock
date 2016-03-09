@@ -161,6 +161,7 @@ GEM
       mini_portile2 (~> 2.0.0.rc2)
     normalize-rails (3.0.3)
     orm_adapter (0.5.0)
+    pg (0.17.1)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
@@ -300,6 +301,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   mysql2 (~> 0.3.18)
+  pg
   quiet_assets
   rails (= 4.2.5)
   rails_12factor
