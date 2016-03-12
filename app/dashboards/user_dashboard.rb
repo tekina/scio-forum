@@ -26,7 +26,7 @@ class UserDashboard < Administrate::BaseDashboard
     confirmed_at: Field::DateTime,
     confirmation_sent_at: Field::DateTime,
     unconfirmed_email: Field::String,
-    role: Field::Number,
+    role: Field::String,
     chapter_id: Field::Number
   }
 
@@ -39,7 +39,8 @@ class UserDashboard < Administrate::BaseDashboard
     :id,
     :email,
     :name,
-    :chapter_id
+    :chapter_id,
+    :created_at
   ]
 
   # SHOW_PAGE_ATTRIBUTES
@@ -47,37 +48,26 @@ class UserDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :id,
     :email,
-    :reset_password_sent_at,
-    :sign_in_count,
-    :current_sign_in_at,
-    :last_sign_in_at,
+    :name,
+    :role,
+    :chapter_id,
     :created_at,
     :updated_at,
-    :name,
-    :confirmed_at,
-    :confirmation_sent_at,
-    :unconfirmed_email
+    :reset_password_sent_at,
   ]
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
+    :id,
     :email,
-    :encrypted_password,
-    :reset_password_token,
-    :reset_password_sent_at,
-    :remember_created_at,
-    :sign_in_count,
-    :current_sign_in_at,
-    :last_sign_in_at,
-    :current_sign_in_ip,
-    :last_sign_in_ip,
     :name,
-    :confirmation_token,
-    :confirmed_at,
-    :confirmation_sent_at,
-    :unconfirmed_email,
+    :role,
+    :chapter_id,
+    :created_at,
+    :updated_at,
+    :reset_password_sent_at,
   ]
 
   # Overwrite this method to customize how users are displayed
