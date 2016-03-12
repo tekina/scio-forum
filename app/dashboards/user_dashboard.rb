@@ -39,6 +39,7 @@ class UserDashboard < Administrate::BaseDashboard
     :id,
     :email,
     :name,
+    :role,
     :chapter_id,
     :created_at
   ]
