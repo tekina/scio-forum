@@ -26,6 +26,8 @@ class UserDashboard < Administrate::BaseDashboard
     confirmed_at: Field::DateTime,
     confirmation_sent_at: Field::DateTime,
     unconfirmed_email: Field::String,
+    role: Field::Number,
+    chapter_id: Field::Number
   }
 
   # COLLECTION_ATTRIBUTES
@@ -36,8 +38,8 @@ class UserDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :email,
-    :encrypted_password,
-    :reset_password_token,
+    :name,
+    :chapter_id
   ]
 
   # SHOW_PAGE_ATTRIBUTES
@@ -45,22 +47,16 @@ class UserDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :id,
     :email,
-    :encrypted_password,
-    :reset_password_token,
     :reset_password_sent_at,
-    :remember_created_at,
     :sign_in_count,
     :current_sign_in_at,
     :last_sign_in_at,
-    :current_sign_in_ip,
-    :last_sign_in_ip,
     :created_at,
     :updated_at,
     :name,
-    :confirmation_token,
     :confirmed_at,
     :confirmation_sent_at,
-    :unconfirmed_email,
+    :unconfirmed_email
   ]
 
   # FORM_ATTRIBUTES

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :admin do
     resources :users
+    resources :chapters
     root to: "users#index"
   end
   root to: 'visitors#index'
