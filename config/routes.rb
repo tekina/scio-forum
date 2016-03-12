@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  resources :posts
   namespace :admin do
     resources :users
     resources :chapters
+    resources :posts
     root to: "users#index"
   end
   root to: 'visitors#index'
