@@ -53,22 +53,17 @@ class UserDashboard < Administrate::BaseDashboard
     :role,
     :chapter_id,
     :created_at,
-    :updated_at,
-    :reset_password_sent_at,
+    :confirmed_at
   ]
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :id,
     :email,
     :name,
     :role,
     :chapter_id,
-    :created_at,
-    :updated_at,
-    :reset_password_sent_at,
   ]
 
   # Overwrite this method to customize how users are displayed
